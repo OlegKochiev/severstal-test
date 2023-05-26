@@ -1,15 +1,16 @@
-import {Outlet} from 'react-router-dom';
+import {ReactElement} from 'react';
 import {GlobalContext, initialState} from '../../context/GlobalContext';
 
 import style from './style.module.css';
-export default function Layout() {
+
+interface Props {
+  children: ReactElement | ReactElement[];
+}
+
+export default function Layout({children}: Props) {
   return (
-    <>
-      <GlobalContext.Provider value={initialState}>
-        <div className={style.container}>
-          <Outlet />
-        </div>
-      </GlobalContext.Provider>
-    </>
+    <GlobalContext.Provider value={initialState}>
+      <div className={style.container}>{children}</div>
+    </GlobalContext.Provider>
   );
 }

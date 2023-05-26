@@ -1,10 +1,3 @@
-const PATHS = {
-  HOME: '/',
-  GET: '/get',
-  POST: '/post',
-  DELETE: '/delete',
-};
-
 const NAVBAR_LINKS = [
   {
     title: 'Home',
@@ -24,4 +17,4 @@ const NAVBAR_LINKS = [
   },
 ];
 
-export {PATHS, NAVBAR_LINKS};
+export {NAVBAR_LINKS};
