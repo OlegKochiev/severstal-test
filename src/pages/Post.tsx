@@ -1,7 +1,5 @@
-import React from 'react'
+import RequestPageTemplate from '../components/RequestPageTemplate/RequestPageTemplate';
 
 export default function Post() {
-  return (
-    <div>Post</div>
-  )
+  return <RequestPageTemplate />;
 }

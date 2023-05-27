@@ -8,8 +8,8 @@ import Post from './pages/Post';
 import Delete from './pages/Delete';
 import NavBar from './components/NavBar/NavBar';
 
-import './css/index.css';
 import './css/reset.css';
+import './css/index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(

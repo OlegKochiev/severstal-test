@@ -1,4 +1,4 @@
-const NAVBAR_LINKS = [
+const PATHS = [
   {
     title: 'Home',
     href: '/',
@@ -17,4 +17,10 @@ const NAVBAR_LINKS = [
   },
 ];
 
-export {NAVBAR_LINKS};
+const WARNINGS = {
+  IS_EMPTY: 'The requests list is empty',
+};
+
+const BASE_URL = 'https://httpbin.org/';
+
+export {PATHS, WARNINGS, BASE_URL};

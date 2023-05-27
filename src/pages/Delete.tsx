@@ -1,5 +1,5 @@
-import React from 'react';
+import RequestPageTemplate from '../components/RequestPageTemplate/RequestPageTemplate';
 
 export default function Delete() {
-  return <div>Delete</div>;
+  return <RequestPageTemplate />;
 }

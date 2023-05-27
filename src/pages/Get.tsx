@@ -1,5 +1,7 @@
-import React from 'react';
+import RequestPageTemplate from '../components/RequestPageTemplate/RequestPageTemplate';
+import useRequest from '../hooks/useRequest';
 
 export default function Get() {
-  return <div>Get</div>;
+  useRequest();
+  return <RequestPageTemplate />;
 }
