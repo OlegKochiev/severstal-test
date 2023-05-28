@@ -26,7 +26,7 @@ export default function CollapsibleBanel() {
             <h3>{WARNINGS.IS_EMPTY}</h3>
           ) : (
             requests.map((request, index) => (
-              <p className={style.collapseRow} key={request.date.getMilliseconds()}>
+              <p className={style.collapseRow} key={request.date.valueOf()}>
                 {index + 1} - url: {request.url}, date: {request.date.toString()}
               </p>
             ))

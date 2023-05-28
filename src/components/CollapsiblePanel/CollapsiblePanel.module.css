@@ -1,10 +1,10 @@
 .collapseContainer {
-  padding: 15px;
   background-color: #aacfff;
   border-radius: 5px;
 }
 
 .collapseHeader {
+  padding: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,6 +17,7 @@
 }
 
 .collapseContentShow {
+  padding: 0 15px 15px;
   height: auto;
   max-height: 100vh;
 }
