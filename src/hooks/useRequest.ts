@@ -1,6 +1,6 @@
 import {useContext} from 'react';
 import {useLocation} from 'react-router-dom';
-import {GlobalContext} from '../context/GlobalContext';
+import {GlobalContext} from '../context/RequestsContext';
 import {makeRequest} from '../services/httpbin';
 import {BASE_URL} from '../constants';
 
@@ -17,9 +17,7 @@ export default function useRequest() {
       url,
       date: new Date(),
     };
-    if (isSuccess) {
-      addRequest(request);
-    }
+    addRequest(request);
   };
 
   return {handleRequest};

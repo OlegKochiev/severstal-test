@@ -1,11 +1,12 @@
 import {useContext, useState} from 'react';
-import {GlobalContext} from '../../context/GlobalContext';
+import {GlobalContext} from '../../context/RequestsContext';
 
 import style from './CollapsiblePanel.module.css';
 import {WARNINGS} from '../../constants';
+import CollapsibleHeader from './CollapsibleHeader/CollapsibleHeader';
 
 export default function CollapsibleBanel() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const {requests} = useContext(GlobalContext);
 
   const collapseContentStyles = `${style.collapseContent} ${isOpen ? style.collapseContentShow : ''}`;
@@ -17,12 +18,12 @@ export default function CollapsibleBanel() {
   return (
     <div className={style.collapseContainer}>
       <div className={style.collapseHeader} onClick={handleCollapseOpen}>
-        Requests panel
+        <CollapsibleHeader isOpen={isOpen} title="Requests panel" />
       </div>
       <div className={collapseContentStyles}>
         <div>
           {!requests.length ? (
-            <h2>{WARNINGS.IS_EMPTY}</h2>
+            <h3>{WARNINGS.IS_EMPTY}</h3>
           ) : (
             requests.map((request, index) => (
               <p className={style.collapseRow} key={request.date.getMilliseconds()}>

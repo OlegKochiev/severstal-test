@@ -1,5 +1,7 @@
 .collapseContainer {
   padding: 15px;
+  background-color: #aacfff;
+  border-radius: 5px;
 }
 
 .collapseHeader {
@@ -12,11 +14,9 @@
 .collapseContent {
   max-height: 0;
   overflow: hidden;
-  transition: all 0.5s cubic-bezier(0, 1, 0, 1);
 }
 
 .collapseContentShow {
   height: auto;
   max-height: 100vh;
-  transition: all 0.5s cubic-bezier(1, 0, 1, 0);
 }

@@ -4,8 +4,6 @@ import useRequest from '../../hooks/useRequest';
 import {Props} from '../../types';
 import {PATHS} from '../../constants';
 
-import style from './style.module.css';
-
 export default function RequestPageTemplate({children}: Props) {
   const {pathname} = useLocation();
   const {handleRequest} = useRequest();
@@ -14,7 +12,7 @@ export default function RequestPageTemplate({children}: Props) {
 
   return (
     <div>
-      <h2 className={style.pageTitle}>{title} page</h2>
+      <h1 className="pageTitle">{title} page</h1>
       <Button onClick={handleRequest}>Make request</Button>
       {children}
     </div>
