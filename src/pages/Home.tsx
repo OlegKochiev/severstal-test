@@ -1,9 +1,10 @@
-import {useContext} from 'react';
-import {GlobalContext} from '../context/GlobalContext';
+import CollapsibleBanel from '../components/CollapsiblePanel/CollapsiblePanel';
 
 export default function Home() {
-  const {requests} = useContext(GlobalContext);
-  console.log(requests);
-
-  return <div>Home</div>;
+  return (
+    <div>
+      Home
+      <CollapsibleBanel />
+    </div>
+  );
 }
